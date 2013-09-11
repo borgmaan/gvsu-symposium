@@ -1,0 +1,781 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usetheme{Warsaw}
+\usecolortheme{rose}
+\definecolor{green}{RGB}{190, 190, 190}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\backgroundcolor #000000
+\fontcolor #ffffff
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1.5cm
+\topmargin 1.5cm
+\rightmargin 1.5cm
+\bottommargin 1.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Trio Analysis:
+\begin_inset Newline linebreak
+\end_inset
+
+A Reproducible Example
+\end_layout
+
+\begin_layout Author
+Andrew Borgman
+\end_layout
+
+\begin_layout Institute
+VARI BBC
+\end_layout
+
+\begin_layout BeginFrame
+Overview
+\end_layout
+
+\begin_layout Enumerate
+Next Generation Sequencing Technologies
+\end_layout
+
+\begin_layout Enumerate
+Trio Analysis
+\end_layout
+
+\begin_layout Enumerate
+Hometown Translational Opportunity
+\end_layout
+
+\begin_layout Enumerate
+Reproducible Research
+\end_layout
+
+\begin_layout Enumerate
+Questions?
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Section
+NGS Tech
+\end_layout
+
+\begin_layout BeginFrame
+Overview
+\end_layout
+
+\begin_layout Enumerate
+Next Generation Sequencing Technologies
+\end_layout
+
+\begin_layout Enumerate
+
+\color green
+Trio Analysis
+\end_layout
+
+\begin_layout Enumerate
+
+\color green
+Hometown Translational Opportunity
+\end_layout
+
+\begin_layout Enumerate
+
+\color green
+Reproducible Research
+\end_layout
+
+\begin_layout Enumerate
+
+\color green
+Questions?
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Subsection
+What Is It?
+\end_layout
+
+\begin_layout BeginFrame
+NGS Platforms
+\end_layout
+
+\begin_layout Itemize
+Massively parallel DNA sequencing
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Up to 6 billion reads/run (600 Gb)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Rapidly decreasing costs coupled with increasing yields
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Moore's law joke
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Trend toward sequencing centers
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Bringing manufacturing efficiency & scalability to NGS
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Grant reviewers love NGS
+\end_layout
+
+\begin_layout Itemize
+$1,000 genome?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Not yet (~$4,500 for 30x human)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\align right
+\begin_inset Graphics
+	filename images/sequencers.pdf
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Subsection
+Example use case
+\end_layout
+
+\begin_layout BeginFrame
+So you have 1,000,000,000 reads...
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Whole Genome Sequencing (WGS)
+\end_layout
+
+\begin_layout Itemize
+Now feasible to scan whole genome for mutations (WGS)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Single nucleotide variants (A -> T)
+\end_layout
+
+\begin_layout Itemize
+Small insertions or deletions (GATTACA -> GACA)
+\end_layout
+
+\begin_layout Itemize
+Structural Variants (part of chr 7 is now in chr 3)
+\end_layout
+
+\end_deeper
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Subsection
+So, it's a big deal?
+\end_layout
+
+\begin_layout BeginFrame
+What's all the fuss about?
+\end_layout
+
+\begin_layout Itemize
+WGS provides individual mutational profile
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Genetic risk assessment and preventative therapies
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+RNAseq provides microarray replacement & more
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Quantify expression with greater dynamic range
+\end_layout
+
+\begin_layout Itemize
+Detect differential isoform expression
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Cheap enough for population-scale studies
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Huge consortium efforts
+\end_layout
+
+\begin_layout Itemize
+GTeX, TCGA, etc.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+One step closer to personalized medicine
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Section
+Trio Analysis
+\end_layout
+
+\begin_layout BeginFrame
+Overview
+\end_layout
+
+\begin_layout Enumerate
+
+\color green
+Next Generation Sequencing Technologies
+\end_layout
+
+\begin_layout Enumerate
+Trio Analysis
+\end_layout
+
+\begin_layout Enumerate
+
+\color green
+Hometown Translational Opportunity
+\end_layout
+
+\begin_layout Enumerate
+
+\color green
+Reproducible Research
+\end_layout
+
+\begin_layout Enumerate
+
+\color green
+Questions?
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Subsection
+Genetics 101
+\end_layout
+
+\begin_layout BeginFrame
+Where do you come from?
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Subsection
+What is it?
+\end_layout
+
+\begin_layout BeginFrame
+Trio Analysis Concepts
+\end_layout
+
+\begin_layout Itemize
+NGS design to increase detection power 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Guide analysis w/ inheritance pattern 
+\end_layout
+
+\begin_layout Itemize
+Increase specificity for de novo mutations 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Used for both rare & common diseases 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Inform on genetic disease etiologies 
+\end_layout
+
+\begin_layout Itemize
+Confirm/formulate diagnosis for syndrome 
+\end_layout
+
+\end_deeper
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Subsection
+Design Advantages
+\end_layout
+
+\begin_layout BeginFrame
+Trio Analysis Advantages
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Section
+Bench to Bedside
+\end_layout
+
+\begin_layout BeginFrame
+Overview
+\end_layout
+
+\begin_layout Enumerate
+
+\color green
+Next Generation Sequencing Technologies
+\end_layout
+
+\begin_layout Enumerate
+
+\color green
+Trio Analysis
+\end_layout
+
+\begin_layout Enumerate
+Hometown Translational Opportunity
+\end_layout
+
+\begin_layout Enumerate
+
+\color green
+Reproducible Research
+\end_layout
+
+\begin_layout Enumerate
+
+\color green
+Questions?
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Subsection
+Impacting Health in GR
+\end_layout
+
+\begin_layout BeginFrame
+Supporting treatment across the street
+\end_layout
+
+\begin_layout Itemize
+Collaboration with Matt Steensma's lab
+\end_layout
+
+\begin_layout Itemize
+Patient w/ rare, genetically uncharacterized disease
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+16 individuals in U.S.
+ w/ similar disease
+\end_layout
+
+\begin_layout Itemize
+No clear inheritance pattern
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Part of his 
+\shape italic
+Outliers
+\shape default
+ initiative
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/matt.JPG
+	scale 16
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Subsection
+What we're doing to help
+\end_layout
+
+\begin_layout BeginFrame
+Our contributions
+\end_layout
+
+\begin_layout Itemize
+Consulting on NGS study design
+\end_layout
+
+\begin_layout Itemize
+Forming collaborations with MSU Genomics Core
+\end_layout
+
+\begin_layout Itemize
+Implementing trio analysis workflow in-house
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Based on MIT/Broad's best practices
+\end_layout
+
+\begin_layout Itemize
+Variant calling, filtering and annotating
+\end_layout
+
+\begin_layout Itemize
+SV/CNV detection
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Trained with Illumina 
+\begin_inset Quotes eld
+\end_inset
+
+Platinum Genomes
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename images/trio_ped.pdf
+	scale 17
+
+\end_inset
+
+
+\begin_inset space \hspace{}
+\length 3cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename images/trio_circos_2.png
+	scale 18
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Section
+Reproducibility
+\end_layout
+
+\begin_layout BeginFrame
+Overview
+\end_layout
+
+\begin_layout Enumerate
+
+\color green
+Next Generation Sequencing Technologies
+\end_layout
+
+\begin_layout Enumerate
+
+\color green
+Trio Analysis
+\end_layout
+
+\begin_layout Enumerate
+
+\color green
+Hometown Translational Opportunity
+\end_layout
+
+\begin_layout Enumerate
+Reproducible Research
+\end_layout
+
+\begin_layout Enumerate
+
+\color green
+Questions?
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Subsection
+You can do this too!
+\end_layout
+
+\begin_layout BeginFrame
+Want to see how I did this?
+\end_layout
+
+\begin_layout Itemize
+Code for trio analysis is on GitHub
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Look here: 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Presentation code is available too
+\end_layout
+
+\begin_layout Itemize
+Learning/Thinking about open science initiatives
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+See xenophobia project on GitHub [https://github.com/borgmaan/xenophobia]
+\end_layout
+
+\end_deeper
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Subsection
+Practice what you preach
+\end_layout
+
+\begin_layout BeginFrame
+In-house reproducibility efforts
+\end_layout
+
+\begin_layout Itemize
+Implementing version control practices in house
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Git backed project tracking
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/gitlab.png
+	scale 15
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Thanks
+\end_layout
+
+\begin_layout Itemize
+Grand Valley State University
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Thanks for hosting and inviting!
+\end_layout
+
+\begin_layout Itemize
+Biostatistics Alum '13
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Van Andel Research Institute
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Bioinformatics & Biostatistics Core
+\end_layout
+
+\begin_layout Itemize
+Mark Neff, Lab of Canine Genetics and Genomics
+\end_layout
+
+\end_deeper
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Questions?
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename images/interp_comic.gif
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\end_body
+\end_document
