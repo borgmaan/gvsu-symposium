@@ -188,10 +188,6 @@ Bringing manufacturing efficiency & scalability to NGS
 
 \end_deeper
 \begin_layout Itemize
-Grant reviewers love NGS
-\end_layout
-
-\begin_layout Itemize
 $1,000 genome?
 \end_layout
 
@@ -244,7 +240,7 @@ Whole Genome Sequencing (WGS)
 \end_layout
 
 \begin_layout Itemize
-Take all DNA reads and align to reference genome (Alignment)
+Map all DNA reads and align to reference genome (Alignment)
 \end_layout
 
 \begin_layout Itemize
@@ -326,20 +322,6 @@ GTeX, TCGA, etc.
 One step closer to personalized medicine
 \end_layout
 
-\begin_layout Itemize
-RNAseq provides microarray replacement & more
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Quantify expression with greater dynamic range
-\end_layout
-
-\begin_layout Itemize
-Detect differential isoform expression
-\end_layout
-
-\end_deeper
 \begin_layout EndFrame
 
 \end_layout
@@ -463,19 +445,9 @@ Use resulting variant calls for trio-informed analysis
 
 \end_deeper
 \begin_layout Itemize
-Used for both rare & common diseases 
+Extend to multiple families for greater power
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-Inform on genetic disease etiologies 
-\end_layout
-
-\begin_layout Itemize
-Confirm/formulate diagnosis for syndrome 
-\end_layout
-
-\end_deeper
 \begin_layout EndFrame
 
 \end_layout
@@ -535,6 +507,20 @@ Improves variant calling procedures
 \begin_deeper
 \begin_layout Itemize
 Probabilistic trio-aware variant calling
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Used for both rare & common diseases 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Inform on genetic disease etiologies 
+\end_layout
+
+\begin_layout Itemize
+Confirm/formulate diagnosis for syndrome 
 \end_layout
 
 \end_deeper
@@ -621,7 +607,7 @@ Outliers
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -764,7 +750,7 @@ Questions?
 \end_layout
 
 \begin_layout Subsection
-You can do this too!
+Open Science Thoughts
 \end_layout
 
 \begin_layout BeginFrame
@@ -780,11 +766,11 @@ Code for trio analysis is on GitHub
 Look here: https://github.com/borgmaan/gvsu-symposium
 \end_layout
 
-\end_deeper
 \begin_layout Itemize
-Presentation code is available too
+Presentation code is there too
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
 Learning/Thinking about open science initiatives
 \end_layout
@@ -794,7 +780,30 @@ Learning/Thinking about open science initiatives
 See xenophobia project on GitHub [https://github.com/borgmaan/xenophobia]
 \end_layout
 
+\begin_layout Itemize
+Internally advocating for 
+\begin_inset Quotes eld
+\end_inset
+
+open notebook science
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
 \end_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename images/abstract-resize.png
+	scale 16
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout EndFrame
 
 \end_layout
@@ -817,6 +826,18 @@ Git backed project tracking
 \end_layout
 
 \end_deeper
+\begin_layout Itemize
+Using GitLab for an internally hosted GitHub
+\end_layout
+
+\begin_layout Itemize
+Just began working on this
+\end_layout
+
+\begin_layout Itemize
+No experiences to share yet...
+\end_layout
+
 \begin_layout Standard
 
 \end_layout
@@ -830,7 +851,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename images/gitlab.png
-	scale 15
+	scale 12
 
 \end_inset
 
@@ -842,6 +863,72 @@ status open
 
 \end_layout
 
+\begin_layout Subsection
+Benefits of reproducibility efforts
+\end_layout
+
+\begin_layout BeginFrame
+Why are we trying it?
+\end_layout
+
+\begin_layout Itemize
+Provides high level of integrity in analysis
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Results can always be reproduced by typing 'make'
+\end_layout
+
+\begin_layout Itemize
+All figures and tables created directly from data
+\end_layout
+
+\begin_layout Itemize
+Everything is tracked; no more uncertainty
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Should be providing 
+\begin_inset Quotes eld
+\end_inset
+
+publication quality analysis
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Our duty as a core service to VARI investigators
+\end_layout
+
+\begin_layout Itemize
+Publications are asking for data and code; have it ready
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+We need more structure
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Current structure is OK, but it is not effective for code sharing
+\end_layout
+
+\begin_layout Itemize
+More defined project frameworks == reuse & efficiency 
+\end_layout
+
+\begin_layout Itemize
+I think Git/Make approach would help 
+\end_layout
+
+\end_deeper
 \begin_layout EndFrame
 
 \end_layout
